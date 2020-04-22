@@ -5,6 +5,10 @@ Simple ASP.NET Core API to test AWS:
 ## Elastic Beanstalk
 Once I installed the `AWS Toolkit for Visual Studio` (Extensions -> Manage Extensions), right-clicking on project enabled the `Publish to AWS Elastic Beanstalk` option
 
+It would be a good idea to create API Gateway (Type REST API) at this point. You'll want to add 2 sources:
+* Method `ANY` on root that proxies to our Elastic Beanstalk URL
+* Method `ANY` on path `{proxy+}` that proxies to our Elastic Beanstalk URL
+
 ## Lambda
 To publish to Lambda, I installed `Amazon.Lambda.Tools` globally:
 ```
