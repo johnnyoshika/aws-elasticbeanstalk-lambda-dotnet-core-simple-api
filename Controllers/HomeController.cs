@@ -28,17 +28,6 @@ namespace SimpleApi.Controllers
 
         [HttpGet("list-files")]
         public IActionResult ListFiles() => Content(string.Join('\n', Directory.GetFiles(Directory.GetCurrentDirectory())));
-
-        [HttpGet("list-folders")]
-        public IActionResult ListFolders() => Content(string.Join('\n', Directory.GetDirectories(Directory.GetCurrentDirectory())));
-
-        [HttpGet("write-file")]
-        public IActionResult WriteFile(string content)
-        {
-            string fileName = $"{Guid.NewGuid().ToString()}.txt";
-            System.IO.File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory()), fileName);
-            return Content(fileName);
-        }
     }
 
     public class Product
