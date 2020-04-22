@@ -8,8 +8,8 @@
     "DefaultFunction" : {
       "Type" : "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "<ASSEMBLY-NAME>::<TYPE-FULL-NAME>::<METHOD-NAME>",
-        "Runtime": "dotnetcore2.1",
+        "Handler": "SimpleApi::SimpleApi.LambdaEntryPoint::FunctionHandlerAsync",
+        "Runtime": "dotnetcore3.1",
         "CodeUri": "",
         "Description": "Default function",
         "MemorySize": 256,
