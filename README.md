@@ -44,3 +44,6 @@ Replase the following 2 lines:
   * To `dotnetcore3.1`
 
 Right-click on project and select `Publish to AWS Lambda`
+
+### Fix root proxy on API Gateway
+After deployment, I was able to access `/products/1` and `products/2`, but root wasn't accessible. To fix this, I went to API Gateway in AWS Console and added an `ANY` method that proxied to our Lambda function.
