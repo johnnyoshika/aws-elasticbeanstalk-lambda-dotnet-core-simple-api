@@ -9,6 +9,8 @@ It would be a good idea to create API Gateway (Type REST API) at this point. You
 * Method `ANY` on root that proxies to our Elastic Beanstalk URL
 * Method `ANY` on path `{proxy+}` that proxies to our Elastic Beanstalk URL
 
+Update - It turns out that you can create an API Gateway (Type HTTP) and achieve the same desired proxy for a fraction of the price. The UI in AWS Console makes it a little tricker to configure, but it's possible.
+
 ## Lambda
 To publish to Lambda, I installed `Amazon.Lambda.Tools` globally:
 ```
